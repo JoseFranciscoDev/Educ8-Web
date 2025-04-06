@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Educ8 - Aprenda do seu jeito</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --azul-claro: #4F9CF9;
+            --azul-escuro: #1F3A93;
+            --branco: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f4f8ff;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: var(--azul-escuro);
+            color: var(--branco);
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 24px;
+        }
+
+        nav a {
+            color: var(--branco);
+            margin-left: 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            flex: 1;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        main h2 {
+            font-size: 48px;
+            color: var(--azul-escuro);
+            margin-bottom: 20px;
+        }
+
+        main p {
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto;
+            color: #555;
+        }
+
+        footer {
+            background-color: var(--azul-claro);
+            color: var(--branco);
+            padding: 15px;
+            text-align: center;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Educ8</h1>
+        <nav>
+            <a href="#">Início</a>
+            <a href="#">Matérias</a>
+            <a href="#">Sobre</a>
+            <a href="#">Login</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Educ8</h2>
+        <p>
+            Estude no seu ritmo com aulas organizadas por matéria. A cada conteúdo, um quiz para testar seus
+            conhecimentos.
+            Ideal pra quem quer aprender de verdade e manter o foco no que importa.
+        </p>
+    </main>
+
+    <footer>
+        &copy; 2025 Educ8. Todos os direitos reservados.
+    </footer>
+</body>
+
+</html>
