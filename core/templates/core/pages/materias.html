@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <title>Aplicação de Estudos - ENEM</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
     }
+
     header {
       background-color: #f4f4f4;
       padding: 20px;
@@ -17,6 +20,7 @@
       gap: 10px;
       flex-wrap: wrap;
     }
+
     header button {
       padding: 10px 20px;
       font-size: 16px;
@@ -27,22 +31,28 @@
       border-radius: 5px;
       transition: background-color 0.3s;
     }
+
     header button:hover {
       background-color: #2a65c7;
     }
+
     .container {
       padding: 20px;
     }
+
     .topics {
       margin-top: 20px;
     }
+
     .topics h2 {
       margin-bottom: 10px;
     }
+
     .topics ul {
       list-style: none;
       padding: 0;
     }
+
     .topics li {
       background-color: #e2e2e2;
       padding: 10px;
@@ -51,6 +61,7 @@
     }
   </style>
 </head>
+
 <body>
   <header>
     <button onclick="showTopics('matematica')">Matemática</button>
@@ -81,7 +92,7 @@
     function showTopics(materia) {
       const list = document.getElementById("topics-list");
       list.innerHTML = "";
-      topics[materia].forEach(function(assunto) {
+      topics[materia].forEach(function (assunto) {
         const li = document.createElement("li");
         li.textContent = assunto;
         list.appendChild(li);
@@ -89,9 +100,10 @@
     }
 
     // Exibe os assuntos de "Matemática" por padrão ao carregar a página
-    window.onload = function() {
+    window.onload = function () {
       showTopics('matematica');
     };
   </script>
 </body>
+
 </html>
