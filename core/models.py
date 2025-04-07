@@ -16,6 +16,7 @@ class Aula(models.Model):
     url = models.URLField(max_length=150, null=False)
     descricaoAula = models.TextField(max_length=100, null=True)
     materia = models.ForeignKey(Materia, on_delete=models.CASCADE)
+    assunto = models.ForeignKey(Assunto, on_delete=models.CASCADE)
     
 class Quiz(models.Model):
     idQuiz = models.AutoField(primary_key=True)
