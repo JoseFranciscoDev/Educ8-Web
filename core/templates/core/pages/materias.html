@@ -63,22 +63,21 @@
 </head>
 
 <body>
-  <header>
-    <button onclick="showTopics('matematica')">Matemática</button>
-    <button onclick="showTopics('portugues')">Português</button>
-    <button onclick="showTopics('historia')">História</button>
-    <button onclick="showTopics('geografia')">Geografia</button>
-    <button onclick="showTopics('ciencias')">Ciências</button>
-  </header>
-
-  <div class="container">
-    <div class="topics">
-      <h2>Assuntos</h2>
-      <ul id="topics-list">
-        <!-- Os assuntos serão inseridos aqui via JavaScript -->
-      </ul>
-    </div>
-  </div>
+  <h1>Matérias</h1>
+  {% for materia in materias %}
+  <h2>{{ materia.nome }}</h2>
+  {% for assunto in materia.assuntos.all %}
+  <h3>— {{ assunto.nome }}</h3>
+  <ul>
+    {% for aula in assunto.aulas.all %}
+    <li>
+      <strong>{{ aula.titulo }}</strong><br>
+      <a href="{{ aula.video_url }}" target="_blank">Assistir aula</a>
+    </li>
+    {% endfor %}
+  </ul>
+  {% endfor %}
+  {% endfor %}
 
   <script>
     const topics = {
