@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Aplicação de Estudos - ENEM</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #f4f4f4;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    header button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      background-color: #4285F4;
+      color: #fff;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+    header button:hover {
+      background-color: #2a65c7;
+    }
+    .container {
+      padding: 20px;
+    }
+    .topics {
+      margin-top: 20px;
+    }
+    .topics h2 {
+      margin-bottom: 10px;
+    }
+    .topics ul {
+      list-style: none;
+      padding: 0;
+    }
+    .topics li {
+      background-color: #e2e2e2;
+      padding: 10px;
+      margin-bottom: 8px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <button onclick="showTopics('matematica')">Matemática</button>
+    <button onclick="showTopics('portugues')">Português</button>
+    <button onclick="showTopics('historia')">História</button>
+    <button onclick="showTopics('geografia')">Geografia</button>
+    <button onclick="showTopics('ciencias')">Ciências</button>
+  </header>
+
+  <div class="container">
+    <div class="topics">
+      <h2>Assuntos</h2>
+      <ul id="topics-list">
+        <!-- Os assuntos serão inseridos aqui via JavaScript -->
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    const topics = {
+      matematica: ["Álgebra", "Geometria", "Estatística"],
+      portugues: ["Gramática", "Literatura", "Interpretação de Texto"],
+      historia: ["História do Brasil", "História Geral", "Geopolítica"],
+      geografia: ["Cartografia", "Climatologia", "Recursos Naturais"],
+      ciencias: ["Física", "Química", "Biologia"]
+    };
+
+    function showTopics(materia) {
+      const list = document.getElementById("topics-list");
+      list.innerHTML = "";
+      topics[materia].forEach(function(assunto) {
+        const li = document.createElement("li");
+        li.textContent = assunto;
+        list.appendChild(li);
+      });
+    }
+
+    // Exibe os assuntos de "Matemática" por padrão ao carregar a página
+    window.onload = function() {
+      showTopics('matematica');
+    };
+  </script>
+</body>
+</html>
