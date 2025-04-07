@@ -8,7 +8,7 @@ class Materia(models.Model):
 class Assunto(models.Model):
     idAssunto = models.AutoField(primary_key=True)
     nomeAssuntos = models.TextField(max_length=30, null=False)
-    materia = models.ForeignKey(Materia, on_delete=models.CASCADE)
+    materia = models.ForeignKey(Materia, related_name='assuntos', on_delete=models.CASCADE)
     
 class Aula(models.Model):
     idAula = models.AutoField(primary_key=True)
